@@ -1,9 +1,0 @@
-ssh gobblers << EOF
-  cd ~/rubyredis
-  git pull
-  echo 'find and restart the docker containers'
-  docker images
-  docker container ls
-  docker ps -a
-  exit
-EOF
