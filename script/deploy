@@ -1,4 +1,4 @@
-ssh ubuser2@192.168.0.112 -p 14702 << EOF
+ssh gobblers << EOF
   cd ~/rubyredis
   git pull
   echo 'find and restart the docker containers'
