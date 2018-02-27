@@ -15,6 +15,7 @@ pipeline {
     stage('Deliver') {
       steps {
         sh './script/deploy'
+        input '"proceed" to continue'
       }
     }
   }
