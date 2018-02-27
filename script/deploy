@@ -1,0 +1,14 @@
+ssh gobblers << EOF
+  cd ~/rubyredis
+  git pull
+  echo 'find and restart the docker containers'
+  docker images
+  docker container ls
+  docker ps -a
+  docker-compose ps
+  docker-compose down
+  echo '#-------'
+  echo 'docker up'
+  docker-compose up -d
+  exit
+EOF
