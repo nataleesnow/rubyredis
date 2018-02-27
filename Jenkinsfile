@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('Build') {
       steps {
-        sh 'echo \'look for running docker services and expire\''
+        sh 'echo \'find and expire docker services\''
       }
     }
   }
