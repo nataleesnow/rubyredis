@@ -12,5 +12,10 @@ pipeline {
         sh 'echo \'write a test\''
       }
     }
+    stage('Deliver') {
+      steps {
+        sh './scripts/deliver.sh'
+      }
+    }
   }
 }
