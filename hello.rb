@@ -10,9 +10,7 @@ set :bind, '0.0.0.0'
 redis = Redis.new(host: 'redis', port: 6379)
 redis.set('key', 1)
 get '/' do
-  redis.incr('key')
-  rval = redis.get('key')
-  str = "#{request.host} current time:  #{Time.now.strftime('%H:%M')}"
-  str += " redis counter: #{rval}"
+  str = "host: #{request.host} current time:  #{Time.now.strftime('%H:%M')}"
+  str += " redis counter: #{redis.incr('key')}"
   json({"Hello" => str})
 end
