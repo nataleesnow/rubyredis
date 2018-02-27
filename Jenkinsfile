@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo \'look for running docker services and expire\''
       }
